@@ -390,7 +390,7 @@ class Simple_Team {
 
 
 	/**
-	 * Renames the "Featured Image" metabox to "Interview Thumbnail"
+	 * Renames the "Featured Image" metabox to "Team Member Avatar"
 	 *
 	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
@@ -400,7 +400,7 @@ class Simple_Team {
 
 		remove_meta_box( 'postimagediv', self::$post_type_name, 'side' );
 
-		add_meta_box( 'postimagediv', __( "Team Thumbnail", self::$text_domain ), 'post_thumbnail_meta_box', self::$post_type_name, 'side', 'low' );
+		add_meta_box( 'postimagediv', __( "Team Member Avatar", self::$text_domain ), 'post_thumbnail_meta_box', self::$post_type_name, 'side', 'low' );
 
 	}	
 
