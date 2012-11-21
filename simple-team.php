@@ -418,6 +418,65 @@ class Simple_Team {
 		return $sizes;
 	 
 	}
+	
+	/**#@+
+	* @internal Template tag for use in templates
+	*/
+	/**
+	* Get the team member's LinkedIn url
+	*
+	* @param int $post_ID Post ID. Defaults to the current post's ID
+	*/
+	public static function get_linkedin( $post_ID = 0 ) {
+
+		if ( absint($post_ID) === 0 )
+			$post_ID = $GLOBALS['post']->ID;
+
+		return get_post_meta($post_ID, '_team-members-linkedin', true);
+
+	}
+	
+	/**
+	* Get the team member's Twitter url
+	*
+	* @param int $post_ID Post ID. Defaults to the current post's ID
+	*/
+	public static function get_twitter( $post_ID = 0 ) {
+
+		if ( absint($post_ID) === 0 )
+			$post_ID = $GLOBALS['post']->ID;
+
+		return get_post_meta($post_ID, '_team-members-twitter', true);
+
+	}
+	
+	/**
+	* Get the team member's role
+	*
+	* @param int $post_ID Post ID. Defaults to the current post's ID
+	*/
+	public static function get_role( $post_ID = 0 ) {
+
+		if ( absint($post_ID) === 0 )
+			$post_ID = $GLOBALS['post']->ID;
+
+		return get_post_meta($post_ID, '_team-members-role', true);
+
+	}	
+	
+	/**
+	* Get the team member's email
+	*
+	* @param int $post_ID Post ID. Defaults to the current post's ID
+	*/
+	public static function get_email( $post_ID = 0 ) {
+
+		if ( absint($post_ID) === 0 )
+			$post_ID = $GLOBALS['post']->ID;
+
+		return get_post_meta($post_ID, '_team-members-email', true);
+
+	}
 
 };
 
