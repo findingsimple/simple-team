@@ -115,8 +115,7 @@ class Simple_Team {
 		$args = array(
 			'description' => __( 'Information about team members.', self::$text_domain ),
 			'labels' => $labels,
-			'public' => true,
-			'publicly_queryable' => true,
+			'public' => false,
 			'show_ui' => true, 
 			'query_var' => true,
 			'has_archive' => false,
