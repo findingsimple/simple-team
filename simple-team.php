@@ -297,7 +297,7 @@ class Simple_Team {
 
   		$columns = array_merge(
     		$columns_start,
-    		array( 'logo' => __( '', self::$text_domain ) ),
+    		array( 'thumbnail' => __( '', self::$text_domain ) ),
     		$columns_end
   		);
 	
@@ -314,11 +314,11 @@ class Simple_Team {
 	 */
 	function thumbnail_column_contents( $column_name, $post_id ) {
 				
-		if ( $column_name != 'logo' )
+		if ( $column_name != 'thumbnail' )
 			return;
 				
 		if ( function_exists('the_post_thumbnail') )
-			echo '<a href="' . get_edit_post_link( $post_id ) . '" title="' . __( 'Edit Sponsor', self::$text_domain ) . '">' . get_the_post_thumbnail( $post_id, 'sponsor-admin-thumb' ) . '</a>';
+			echo '<a href="' . get_edit_post_link( $post_id ) . '" title="' . __( 'Edit Team Member', self::$text_domain ) . '">' . get_the_post_thumbnail( $post_id, 'team-admin-thumb' ) . '</a>';
 					
 	}
 
