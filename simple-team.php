@@ -284,7 +284,7 @@ class Simple_Team {
 	}	
 	
 	/**
-	 * Add a column to the manage pages page to display the interviewee thumbnail. 
+	 * Add a column to the manage pages page to display the team member thumbnail. 
 	 * 
 	 * @since 1.0
 	 * @author Jason Conroy
@@ -306,7 +306,7 @@ class Simple_Team {
 	}	
 	
 	/**
-	 * Add the interviewee thumbnail to the custom column on the manage page.
+	 * Add the team member thumbnail to the custom column on the manage page.
 	 * 
 	 * @since 1.0
 	 * @author Jason Conroy
