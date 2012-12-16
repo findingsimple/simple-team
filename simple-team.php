@@ -192,13 +192,8 @@ class Simple_Team {
 	 * @param array $box Metabox information
 	 */
 	public static function do_meta_box( $object, $box ) {
+	
 		wp_nonce_field( basename( __FILE__ ), 'member-details' );
-
-		if( empty( $start_date ) )
-			$start_date = date( 'Y-m-d' );
-
-		if( empty( $end_date ) )
-			$end_date = date( 'Y-m-d',  strtotime('+2 days') );
 
 		?>
 
