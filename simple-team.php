@@ -339,7 +339,7 @@ class Simple_Team {
 	}
 	
 	/**
-	 * Replaces the 'Featured Image' label with 'Team Member Avatar' on the Edit page for the simple_interview post type.
+	 * Replaces the 'Featured Image' label with 'Team Member Avatar' on the Edit page for the simple_team post type.
 	 *
 	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
