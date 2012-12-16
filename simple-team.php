@@ -202,25 +202,25 @@ class Simple_Team {
 		<p>
 			<label for='team-members-role'>
 				<?php _e( 'Role:', self::$text_domain ); ?>
-				<input type='date' id='team-members-role' name='team-members-role' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-role', true ) ); ?>' />
+				<input type='text' id='team-members-role' name='team-members-role' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-role', true ) ); ?>' />
 			</label>
 		</p>
 		<p>
 			<label for='team-members-email'>
 				<?php _e( 'Email:', self::$text_domain ); ?>
-				<input type='date' id='team-members-email' name='team-members-email' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-email', true ) ); ?>' />
+				<input type='text' id='team-members-email' name='team-members-email' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-email', true ) ); ?>' />
 			</label>
 		</p>
 		<p>
 			<label for='team-members-twitter'>
 				<?php _e( 'Twitter:', self::$text_domain  ); ?>
-				<input type='date' id='team-members-twitter' name='team-members-twitter' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-twitter', true ) ); ?>' />
+				<input type='text' id='team-members-twitter' name='team-members-twitter' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-twitter', true ) ); ?>' />
 			</label>
 		</p>
 		<p>
 			<label for='team-members-linkedin'>
 				<?php _e( 'LinkedIn:', self::$text_domain  ); ?>
-				<input type='date' id='team-members-linkedin' name='team-members-linkedin' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-linkedin', true ) ); ?>' />
+				<input type='text' id='team-members-linkedin' name='team-members-linkedin' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-linkedin', true ) ); ?>' />
 			</label>
 		</p>
 
