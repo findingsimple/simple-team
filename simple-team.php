@@ -177,7 +177,7 @@ class Simple_Team {
 	}
 	
 	/**
-	 * Add the citation meta box
+	 * Add the member details meta box
 	 *
 	 * @wp-action add_meta_boxes
 	 */
@@ -186,7 +186,7 @@ class Simple_Team {
 	}
 
 	/**
-	 * Output the citation meta box HTML
+	 * Output the member details meta box HTML
 	 *
 	 * @param WP_Post $object Current post object
 	 * @param array $box Metabox information
@@ -231,7 +231,7 @@ class Simple_Team {
 	}
 
 	/**
-	 * Save the citation metadata
+	 * Save the member details metadata
 	 *
 	 * @wp-action save_post
 	 * @param int $post_id The ID of the current post being saved.
