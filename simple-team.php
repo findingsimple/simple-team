@@ -76,6 +76,8 @@ class Simple_Team {
 		add_action( 'add_meta_boxes', array( __CLASS__, 'add_meta_box' ) );
 		
 		add_action( 'save_post', array( __CLASS__, 'save_meta' ), 10, 1 );
+	
+		add_image_size( 'team-admin-thumb', 60, 60, false );
 		
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_admin_styles_and_scripts' ) );
 				
