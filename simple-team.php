@@ -288,7 +288,7 @@ class Simple_Team {
 	 * 
 	 * @since 1.0
 	 * @author Jason Conroy
-	 * @package Simple Interviews
+	 * @package Simple Team
 	 */
 	public static function add_thumbnail_column( $columns ) {
 	
@@ -310,7 +310,7 @@ class Simple_Team {
 	 * 
 	 * @since 1.0
 	 * @author Jason Conroy
-	 * @package Simple Interviews
+	 * @package Simple Team
 	 */
 	function thumbnail_column_contents( $column_name, $post_id ) {
 				
