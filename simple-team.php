@@ -184,7 +184,8 @@ class Simple_Team {
 	 * @wp-action add_meta_boxes
 	 */
 	public static function add_meta_box() {
-		add_meta_box( 'member-details', __( 'Member Details', self::$text_domain  ), array( __CLASS__, 'do_meta_box' ), self::$post_type_name , 'normal', 'high' );
+		add_meta_box( 'member-details', __( 'Member Details', self::$text_domain  ), array( __CLASS__, 'do_details_meta_box' ), self::$post_type_name , 'normal', 'high' );
+		add_meta_box( 'member-social', __( 'Social Details', self::$text_domain  ), array( __CLASS__, 'do_social_meta_box' ), self::$post_type_name , 'normal', 'high' );
 	}
 
 	/**
@@ -193,9 +194,9 @@ class Simple_Team {
 	 * @param WP_Post $object Current post object
 	 * @param array $box Metabox information
 	 */
-	public static function do_meta_box( $object, $box ) {
+	public static function do_details_meta_box( $object, $box ) {
 	
-		wp_nonce_field( basename( __FILE__ ), 'member-details' );
+		wp_nonce_field( basename( __FILE__ ), 'team-member' );
 
 		?>
 
@@ -205,6 +206,22 @@ class Simple_Team {
 				<input type='text' id='team-members-role' name='team-members-role' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-role', true ) ); ?>' />
 			</label>
 		</p>
+
+<?php
+	}
+	
+	/**
+	 * Output the member details meta box HTML
+	 *
+	 * @param WP_Post $object Current post object
+	 * @param array $box Metabox information
+	 */
+	public static function do_social_meta_box( $object, $box ) {
+	
+		wp_nonce_field( basename( __FILE__ ), 'team-member' );
+
+		?>
+
 		<p>
 			<label for='team-members-email'>
 				<?php _e( 'Email:', self::$text_domain ); ?>
@@ -225,7 +242,7 @@ class Simple_Team {
 		</p>
 
 <?php
-	}
+	}	
 
 	/**
 	 * Save the member details metadata
@@ -236,7 +253,7 @@ class Simple_Team {
 	public static function save_meta( $post_id ) {
 
 		/* Verify the nonce before proceeding. */
-		if ( !isset( $_POST['member-details'] ) || !wp_verify_nonce( $_POST['member-details'], basename( __FILE__ ) ) )
+		if ( !isset( $_POST['team-member'] ) || !wp_verify_nonce( $_POST['team-member'], basename( __FILE__ ) ) )
 			return $post_id;
 
 		$meta = array(
