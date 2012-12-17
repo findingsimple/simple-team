@@ -206,6 +206,12 @@ class Simple_Team {
 				<input type='text' id='team-members-role' name='team-members-role' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-role', true ) ); ?>' />
 			</label>
 		</p>
+		<p>
+			<label for='team-members-email'>
+				<?php _e( 'Email:', self::$text_domain ); ?>
+				<input type='text' id='team-members-email' name='team-members-email' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-email', true ) ); ?>' />
+			</label>
+		</p>
 
 <?php
 	}
@@ -222,12 +228,6 @@ class Simple_Team {
 
 		?>
 
-		<p>
-			<label for='team-members-email'>
-				<?php _e( 'Email:', self::$text_domain ); ?>
-				<input type='text' id='team-members-email' name='team-members-email' value='<?php echo esc_attr( get_post_meta( $object->ID, '_team-members-email', true ) ); ?>' />
-			</label>
-		</p>
 		<p>
 			<label for='team-members-twitter'>
 				<?php _e( 'Twitter:', self::$text_domain  ); ?>
