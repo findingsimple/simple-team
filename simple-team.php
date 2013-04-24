@@ -131,7 +131,7 @@ class Simple_Team {
 			'menu_position' => null,
 			'taxonomies' => array(''),
 			'show_in_nav_menus' => false,
-			'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
+			'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes')
 		); 
 		
 		$args = apply_filters( self::$post_type_name . '_cpt_args' , $args );
