@@ -151,19 +151,19 @@ class Simple_Team {
 
 		$messages[ self::$post_type_name ] = array(
 			0 => '', // Unused. Messages start at index 1.
-			1 => sprintf( __('Team member updated. <a href="%s">View</a>', self::$text_domain ), esc_url( get_permalink($post->ID) ) ),
+			1 => sprintf( __('Team member updated.', self::$text_domain ), esc_url( get_permalink($post->ID) ) ),
 			2 => __('Custom field updated.', self::$text_domain ),
 			3 => __('Custom field deleted.', self::$text_domain ),
 			4 => __('Team member updated.', self::$text_domain ),
 			/* translators: %s: date and time of the revision */
 			5 => isset($_GET['revision']) ? sprintf( __('Team member restored to revision from %s', self::$text_domain ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6 => sprintf( __('Team member published. <a href="%s">View</a>', self::$text_domain ), esc_url( get_permalink($post->ID) ) ),
+			6 => sprintf( __('Team member published.', self::$text_domain ), esc_url( get_permalink($post->ID) ) ),
 			7 => __('Team member saved.', self::$text_domain ),
-			8 => sprintf( __('Team member submitted. <a target="_blank" href="%s">Preview</a>', self::$text_domain ), esc_url( add_query_arg( 'preview', 'true', get_permalink($post->ID) ) ) ),
-			9 => sprintf( __('Team member scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview</a>', self::$text_domain ),
+			8 => sprintf( __('Team member submitted.', self::$text_domain ), esc_url( add_query_arg( 'preview', 'true', get_permalink($post->ID) ) ) ),
+			9 => sprintf( __('Team member scheduled for: <strong>%1$s</strong>.', self::$text_domain ),
 			  // translators: Publish box date format, see http://php.net/date
 			  date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post->ID) ) ),
-			10 => sprintf( __('Team member draft updated. <a target="_blank" href="%s">Preview</a>', self::$text_domain ), esc_url( add_query_arg( 'preview', 'true', get_permalink($post->ID) ) ) ),
+			10 => sprintf( __('Team member draft updated.', self::$text_domain ), esc_url( add_query_arg( 'preview', 'true', get_permalink($post->ID) ) ) ),
 		);
 
 		return $messages;
