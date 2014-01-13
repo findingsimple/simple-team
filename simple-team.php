@@ -122,6 +122,7 @@ class Simple_Team {
 			'description' => __( 'Information about team members.', self::$text_domain ),
 			'labels' => $labels,
 			'public' => false,
+			'menu_icon' => '',
 			'show_ui' => true, 
 			'query_var' => true,
 			'has_archive' => false,
@@ -178,8 +179,15 @@ class Simple_Team {
 				
 		if ( is_admin() ) {
 	
-			wp_register_style( 'simple-team', self::get_url( '/css/simple-team-admin.css', __FILE__ ) , false, '1.0' );
-			wp_enqueue_style( 'simple-team' );
+			?>
+ 
+			<style>
+				#adminmenu .menu-icon-simple_team div.wp-menu-image:before {
+					content: "\f307";
+				}
+			</style>
+			 
+			<?php
 		
 		}
 		
