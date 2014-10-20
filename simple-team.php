@@ -4,7 +4,7 @@ Plugin Name: Simple Team
 Plugin URI: http://plugins.findingsimple.com
 Description: Adds the "Team Member" CPT.
 Version: 1.0
-Author: Finding Simple ( Jason Conroy & Brent Shepherd)
+Author: Finding Simple
 Author URI: http://findingsimple.com
 License: GPL2
 */
@@ -33,7 +33,6 @@ if ( ! class_exists( 'Simple_Team' ) ) :
  * should not be initialized until after the plugins_loaded and after_setup_theme hooks.
  * However, it also needs to run early on the init hook.
  *
- * @author Jason Conroy <jason@findingsimple.com>
  * @package Simple Team
  * @since 1.0
  */
@@ -46,7 +45,6 @@ add_action( 'init', 'initialize_team', -1 );
  * Plugin Main Class.
  *
  * @package Simple Team
- * @author Jason Conroy <jason@findingsimple.com>
  * @since 1.0
  */
 class Simple_Team {
@@ -321,19 +319,18 @@ class Simple_Team {
 	 * Add a column to the manage pages page to display the team member thumbnail. 
 	 * 
 	 * @since 1.0
-	 * @author Jason Conroy
 	 * @package Simple Team
 	 */
 	public static function add_thumbnail_column( $columns ) {
 	
-  		$columns_start = array_slice( $columns, 0, 1, true );
-  		$columns_end   = array_slice( $columns, 1, null, true );
+		$columns_start = array_slice( $columns, 0, 1, true );
+		$columns_end   = array_slice( $columns, 1, null, true );
 
-  		$columns = array_merge(
-    		$columns_start,
-    		array( 'thumbnail' => __( '', self::$text_domain ) ),
-    		$columns_end
-  		);
+		$columns = array_merge(
+			$columns_start,
+			array( 'thumbnail' => __( '', self::$text_domain ) ),
+			$columns_end
+		);
 	
 		return $columns;
 		
@@ -343,7 +340,6 @@ class Simple_Team {
 	 * Add the team member thumbnail to the custom column on the manage page.
 	 * 
 	 * @since 1.0
-	 * @author Jason Conroy
 	 * @package Simple Team
 	 */
 	function thumbnail_column_contents( $column_name, $post_id ) {
@@ -359,7 +355,6 @@ class Simple_Team {
 	/**
 	 * Replaces the "Enter title here" text
 	 *
-	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
 	 * @since 1.0
 	 */
@@ -375,7 +370,6 @@ class Simple_Team {
 	/**
 	 * Replaces the 'Featured Image' label with 'Team Member Avatar' on the Edit page for the simple_team post type.
 	 *
-	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
 	 * @since 1.0
 	 */
@@ -392,7 +386,6 @@ class Simple_Team {
 	/**
 	 * Changes the 'Use as featured image' link text on the media panel
 	 *
-	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
 	 * @since 1.0
 	 */
@@ -420,7 +413,6 @@ class Simple_Team {
 	/**
 	 * Renames the "Featured Image" metabox to "Team Member Avatar"
 	 *
-	 * @author Brent Shepherd <brent@findingsimple.com>
 	 * @package Simple Team
 	 * @since 1.0
 	 */
@@ -435,7 +427,6 @@ class Simple_Team {
 	/**
 	 * Remove admin thumbnail size from the list of available sizes in the media uploader
 	 *
-	 * @author Jason Conroy <jason@findingsimple.com>
 	 * @package Simple Team
 	 * @since 1.0
 	 */	
